@@ -1,0 +1,7 @@
+{
+	"db_config" :{
+		"db_name" : "lesson_plan_database",
+		"username" : "root",
+		"password" : ""
+	}
+}
