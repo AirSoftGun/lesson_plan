@@ -11,6 +11,7 @@
 			}
 
 			$this -> view -> controller = 'create';
+			$this -> view -> title = 'create';
 			$this -> view -> render();
 		}
 	}
