@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
 <body>
 	<form>
 		<input type="text">
 	</form>
+	<p>import z excela - szablon do pobrania</p>
+	<p>kolor tesktu i linii</p>
+	<p>background</p>
 </body>
 </html>

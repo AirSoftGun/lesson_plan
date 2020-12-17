@@ -1,7 +1,9 @@
 {
 	"db_config" :{
-		"db_name" : "lesson_plan_database",
+		"db_name" : "lesson_plan",
 		"username" : "root",
 		"password" : ""
-	}
+	},
+
+	"week_correct": false
 }

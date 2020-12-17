@@ -11,7 +11,7 @@
 			if ($create_db->execute()){
 				$use_db->execute();
 				$file_manager_sql = $this -> pdo -> prepare('');//tworzenie tabel
-				$file_manager_sql->execute();
+				//$file_manager_sql->execute();
 			} else {
 				$use_db->execute();
 			}

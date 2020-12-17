@@ -2,10 +2,14 @@
 	class Home extends Controller {
 		function __construct($params) {
 			parent::__construct();
-			// $this -> view -> controller = 'home';
-			// $this-> view -> title = 'Home';
-			// $this-> view -> render();
-			echo 'main page';
+
+			if (count($params)>=2) {
+				header("Location: /home");
+			}
+
+			$this -> view -> controller = 'home';
+			$this -> view -> title = 'Home';
+			$this-> view -> render();
 		}
 	}
 ?>
