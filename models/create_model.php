@@ -2,15 +2,17 @@
 class Create_model extends Model {
 	function __construct() {
 		parent::__construct();
-		
-		//$_POST['create_button']=NULL;
-		if (isset($_POST['create_button']) && !empty($_POST['plan_name'])) {
+
+		if (isset($_POST['create_button']) && !empty($_POST['plan_name'])){					//validacja
 			$status = true;
 			while($status){
 				$this->plan_url = $this->generate_plan_url();
 				$check_query = $this->pdo->prepare("SELECT `url` FROM `plans` WHERE `url`=:url_param");
 				$check_query->bindValue(':url_param', $this->plan_url);
-				//dokonczyc
+				$check_query->execute();
+				if (!$check_query->fetch(PDO::FETCH_ASSOC)){
+					$status = false;
+				}
 			}
 			$this -> create_plan_in_db();
 		}
