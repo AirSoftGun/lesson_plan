@@ -20,7 +20,7 @@ class Create_model extends Model {
 	private function create_plan_in_db(){
 		$this->current_time = date('Y-m-d H:i:s');
 		$null = NULL;
-		$input_query =  $this->pdo->prepare("INSERT INTO `plans` (`id`, `url`, `title`, `border_color`, `text_color`, `background`, `create_date`, `visits`, `last_visit`) 
+		$input_query = $this->pdo->prepare("INSERT INTO `plans` (`id`, `url`, `title`, `border_color`, `text_color`, `background`, `create_date`, `visits`, `last_visit`) 
 											VALUES (NULL, :url_param, :title_param, :border_color_param, :text_color_param, :background_img_param, :current_time_param, '0', NULL)");
 		$input_query->bindValue(':url_param', $this->plan_url);
 		$input_query->bindValue(':title_param', $_POST['plan_name']);
