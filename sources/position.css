@@ -1,3 +1,14 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
 body {
 	background-color: rgb(135, 135, 135);
+}
+
+.day_column {
+	height: 400px;
+	width: 250px;
+	border: 1px black solid;
+	float: left;
 }
